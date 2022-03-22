@@ -4,7 +4,7 @@ const API_Key = `6ddb3ac458732b38c6fe42ce4738dfed`;
 document.getElementById('serach-button').addEventListener('click', () => {
     const cityName = document.getElementById('city-name').value;
 
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_Key}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_Key}&units=metric`;
     fetch(url)
         .then(res => res.json())
         .then(data => displayTemp(data))
